@@ -1,0 +1,51 @@
+/* --- Mundo normal --- */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf6e3;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container{
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Essa é a mágica que coloca lado a lado */
+.card-personagem{
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Cria um espaço de 20px entre a foto e o poema */
+    margin-bottom: 30px; /* Dá um espaço antes de começar a próxima personagem */
+}
+
+/* A formatação da sua foto */
+.personagens{
+    float: left;
+    border-radius: 10px;
+    transition: all 0.2s ease; /* Avisa o CSS que as mudanças devem ser rápidas, mas suaves */
+}
+
+/* O que acontece APENAS quando o mouse passa por cima da foto */
+.personagens:hover{
+    filter: grayscale(100%) contrast(200%); /* Fica preto e branco e com contraste estourado */
+    transform: scale(1.05) rotate(3deg); /* Dá um leve zoom e entorta a foto */
+    box-shadow: 5px 5px 5px red; /* Cria uma sombra dura e vermelha do nada */
+    cursor: crosshair;
+}
+
+.poema{
+    text-align: left;
+}
+
+#botao-misterio{
+    background-color: #ffb6c1; /*rosa claro*/
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+

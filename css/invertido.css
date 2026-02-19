@@ -1,0 +1,20 @@
+/*--- Modo Invertido ---*/
+
+body{
+    background-color: #000;
+    color: #ff0000;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#titulo-principal{
+    text-shadow: 2px 2px #ff0000, -2px -2px #0000ff;
+}
+.texto-normal,
+.poema{
+    display: none;
+}
+
+#botao-misterio{
+    background-color: #8b0000;
+    color: white;
+}
