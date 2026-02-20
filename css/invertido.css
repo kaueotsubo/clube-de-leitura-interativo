@@ -1,20 +1,182 @@
 /*--- Modo Invertido ---*/
 
-body{
+/* Reset específico para o menu no modo invertido */
+.menu-navegacao {
+    display: flex !important; /* Força o menu a aparecer */
+    background-color: #0a0000 !important;
+    border-bottom: 2px solid #8b0000 !important;
+    box-shadow: 0 2px 15px rgba(255, 0, 0, 0.3) !important;
+    animation: tremedeira 0.5s infinite;
+    padding: 15px 30px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-texto {
+    font-family: 'Courier New', monospace !important;
+    color: #ff0000 !important;
+    text-shadow: 0 0 8px red !important;
+    animation: piscar 1s infinite;
+    font-size: 28px;
+}
+
+.menu-lista {
+    display: flex !important;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-lista li {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    text-decoration: none !important;
+    color: #cc0000 !important;
+    font-family: 'Courier New', monospace !important;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-item:hover {
+    background-color: #8b0000 !important;
+    color: white !important;
+    text-shadow: none;
+}
+
+.menu-item.ativo {
+    background-color: #8b0000 !important;
+    color: white !important;
+    border: 1px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+    width: 70%;
+}
+
+.menu-item.ativo::after {
+    display: none;
+}
+
+/* Menu mobile no modo invertido */
+.menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ff0000 !important;
+}
+
+/* Estilo do container (mantendo seu código original) */
+body {
     background-color: #000;
     color: #ff0000;
     font-family: 'Courier New', Courier, monospace;
 }
 
-#titulo-principal{
-    text-shadow: 2px 2px #ff0000, -2px -2px #0000ff;
+#titulo-principal {
+    text-shadow: 3px 0px 0px #ff0000, -3px 0px 0px #0000ff;
+    animation: tremedeira 0.1s infinite;
 }
+
+.card-personagens {
+    background-color: #111111;
+    border: 1px solid #8b0000;
+    box-shadow: none;
+}
+
+.personagens {
+    filter: grayscale(100%) contrast(200%) brightness(60%);
+    animation: tremedeira 0.3s infinite;
+}
+
 .texto-normal,
-.poema{
+.poema {
     display: none;
 }
 
-#botao-misterio{
+#botao-misterio {
     background-color: #8b0000;
     color: white;
+    font-weight: bold;
+    border: 2px solid red;
+    box-shadow: 0 0 15px red;
+}
+
+/*animações*/
+@keyframes tremedeira {
+    0% { transform: translate(0,0); }
+    20% { transform: translate(-3px,3px); }
+    40% { transform: translate(-3px,-3px); }
+    60% { transform: translate(3px, 3px); }
+    80% { transform: translate(3px, -3px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Responsividade para celular no modo invertido */
+@media (max-width: 768px) {
+    .menu-lista {
+        display: none !important;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #1a0000 !important;
+        flex-direction: column;
+        gap: 0;
+        border-top: 2px solid #8b0000;
+        box-shadow: 0 4px 10px rgba(255,0,0,0.2);
+    }
+    
+    .menu-lista.menu-aberto {
+        display: flex !important;
+    }
+    
+    .menu-lista li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu-item {
+        display: block;
+        padding: 15px;
+        border-radius: 0;
+    }
+    
+    .menu-item.ativo {
+        background-color: #8b0000;
+    }
+    
+    .menu-mobile {
+        display: block !important;
+    }
 }

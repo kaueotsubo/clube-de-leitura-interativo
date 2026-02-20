@@ -4,26 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <title>Clube de Literatura</title>
     <link id="estilo" rel="stylesheet" href="css/normal.css">
 </head>
 
 <body>
-
+    <nav class="menu-navegacao">
+        <div class="logo">
+            <span class="logo-texto">📚 Clube de Literatura</span>
+        </div>
+        <ul class="menu-lista">
+            <li><a href="index.html" class="menu-item ativo">início</a></li>
+            <li><a href="formulario.html" class="menu-item">Inscrever-se</a></li>
+        </ul>
+        <!-- Botão do menu mobile (para celular) -->
+        <button class="menu-mobile">☰</button>
+    </nav>
+    <!--Inicio da classe container-->
     <div class="container">
         <h1 id="titulo-principal">Bem vindo ao Clube de Literatura!</h1>
         <p class="texto-normal">Aqui nós compartilhamos nossos poemas e resenhas de livros favoritos. Fique à vontade
             para ler e relaxar.</p>
-        <div class="card-personagens">
-            <img class="personagens" id="Sayori" src="img/SayoriDDLC.png" alt="Membro do Clube">
-            <div class="poema">
-                <h2>O Passaro de Papel</h2>
-                <p>Voa alto no céu azul,<br>Sem medo de cair.<br>Mas se a chuva chegar,<br>Ele vai se desfazer.</p>
+        <!--Inicio da classe container-clube-->
+        <div class="container-clube">
+            <div class="card-personagens">
+                <img class="personagens" id="Sayori" src="img/SayoriDDLC.png" alt="Vice Presidente do Clube">
+                <div class="poema">
+                    <h2>Querido Raio do Sol</h2>
+                    <p>A forma como você brilha pelas minhas cortinas de manhã<br>
+                        Faz com que eu sinta que você sentiu minha falta.<br>
+                        Beijando minha testa para me ajudar a levantar da cama.<br>
+                        Fazendo eu esfregar o sono dos meus olhos.</p>
+                </div>
+            </div>
+            <div class="card-personagens">
+                <img class="personagens" id="Natsuki" src="img/NatsukiDDLC.png" alt="Membro do Clube">
+                <div class="poema">
+                    <h2>Águias Podem Voar</h2>
+                    <p>Macacos podem escalar<br>
+                        Grilos podem saltar<br>
+                        Cavalos podem correr<br>
+                        Corujas podem procurar<br>
+                        Guepardos podem correr<br>
+                        Águias podem voar<br>
+                        Pessoas podem tentar<br>
+                        Mas isso é tudo.</p>
+                </div>
+            </div>
+            <div class="card-personagens">
+                <img class="personagens" id="Yuri" src="img/Yuri_DDLCP.png" alt="Membro do Clube">
+                <div class="poema">
+                    <h2>Fantasma Sob a Luz</h2>
+                    <p>As gavinhas do meu cabelo iluminam-se sob o brilho âmbar.<br>
+                        Banhando-se.<br>
+                        Deve ser esta a luz?<br>
+                        O último poste de rua a resistir ao teste do tempo.</p>
+                </div>
+            </div>
+            <div class="card-personagens">
+                <img class="personagens" id="Monika" src="img/Monika_DDLC.png" alt="Presidenta do Clube">
+                <div class="poema">
+                    <h2>Buraco na Parede</h2>
+                    <p>Não poderia ter sido eu.<br>
+                        Veja, a direção em que o estuque se projeta.<br>
+                        Um vizinho barulhento? Um namorado bravo?<br>
+                        Eu nunca saberei. Eu não estava em casa.</p>
+                </div>
             </div>
         </div>
-
+        <!--Fim da classe container-clube-->
         <button id="botao-misterio">Ler mais poemas</button>
     </div>
+    <!--Fim da classe container-->
 
     <script src="js/script.js"></script>
 </body>

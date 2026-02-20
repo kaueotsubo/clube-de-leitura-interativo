@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <title>Clube de Literatura - Inscrição</title>
+    <link id="estilo" rel="stylesheet" href="css/normal.css">
+</head>
+
+<body>
+    <!-- Menu (copie o mesmo do index.html) -->
+    <nav class="menu-navegacao">
+        <div class="logo">
+            <span class="logo-texto">📚 Clube de Literatura</span>
+        </div>
+        <ul class="menu-lista">
+            <li><a href="index.html" class="menu-item">Início</a></li>
+            <li><a href="formulario.html" class="menu-item ativo">Inscrever-se</a></li>
+        </ul>
+        <button class="menu-mobile">☰</button>
+    </nav>
+
+    <div class="container">
+        <h1 id="titulo-principal">Faça parte do clube!</h1>
+        <p class="texto-normal">Preencha o formulário para receber poemas exclusivos.</p>
+            <!-- Início do formulário de inscrição -->
+            <div class="formulario-clube">
+                <h3>Entre para o clube!</h3>
+                <p>Receba poemas exclusivos no seu e-mail</p>
+
+                <div class="grupo-formulario">
+                    <input type="text" id="nome" placeholder="Seu nome" class="campo-form">
+                    <input type="email" id="email" placeholder="Seu melhor e-mail" class="campo-form">
+                    <button id="botao-inscrever" class="botao-inscrever">
+                        Quero participar
+                    </button>
+                </div>
+
+                <!-- Área para mostrar mensagens de sucesso/erro -->
+                <div id="mensagem-feedback" class="mensagem-feedback"></div>
+            </div>
+            <!-- Fim do formulário de inscrição -->
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
